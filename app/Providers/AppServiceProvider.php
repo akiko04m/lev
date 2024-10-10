@@ -6,6 +6,11 @@ use Illuminate\Pagination\Paginator; //追記
 
 class AppServiceProvider extends ServiceProvider
 {
+    public function register(): void
+    {
+        Paginatotor::useBootstrap();
+    }
+    
     public function boot(): void
     {
        Paginator::useBootstrap();    //追記

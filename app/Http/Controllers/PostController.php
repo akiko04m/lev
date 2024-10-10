@@ -9,9 +9,6 @@ class PostController extends Controller
 {
 public function index(Post $post)
 {
-    return view('posts.index')->with(['posts' => $post->getPaginateByLimit()]);//getPaginateByLimit()はPost.phpで定義したメソッドです。
+    return view('posts.index')->with(['posts' => $post->getPaginateByLimit(3)]);//getPaginateByLimit()はPost.phpで定義したメソッドです。
 }
 }
-
-
-?>
